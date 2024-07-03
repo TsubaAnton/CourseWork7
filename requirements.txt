@@ -1,4 +1,4 @@
-django==5.0.6
+django==4.2
 asgiref==3.8.1
 tzdata==2024.1
 sqlparse==0.4.4
@@ -32,3 +32,8 @@ cron-descriptor==1.4.3
 django-timezone-field==6.1.0
 django_celery_beat==2.6.0
 python-crontab==3.1.0
+django-redis==5.4.0
+django-cors-headers==4.4.0
+
+
+

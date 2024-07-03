@@ -40,7 +40,6 @@ class HabitTestCase(APITestCase):
         response = self.client.get(reverse('habits:habit_list'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-
     def test_habit_create(self):
         data = {'user': self.user.id, 'place': 'test_place', 'time': '12:00:00', 'action': 'test_action',
                 'is_pleasant': False, 'related_habit': '', 'period': 2, 'reward': 'test_reward', 'duration': 60,
@@ -64,5 +63,3 @@ class HabitTestCase(APITestCase):
     def test_habit_destroy(self):
         response = self.client.delete(reverse('habits:habit_destroy', kwargs={'pk': self.habit.id}))
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-
-
